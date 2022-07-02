@@ -20,6 +20,7 @@ async function convertFolder(folder) {
         }
         let content = fs.readFileSync(filepath, "utf-8");
         filepath = filepath.replace(".md", ".html").replace(sourceFolder, outFolder);
+        //<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
         fs.writeFileSync(filepath, converter.makeHtml(content), "utf-8");
     };
 }

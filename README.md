@@ -1,2 +1,2 @@
 # kevinchen2046.github.io
-mywebsit
+[访问GitPage](https://kevinchen2046.github.io/)
