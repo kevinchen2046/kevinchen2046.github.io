@@ -1,0 +1,28 @@
+{
+  "name": "kevinchen2046.github.io",
+  "version": "1.0.0",
+  "description": "mywebsit",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "build": "node src/main"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kevinchen2046/kevinchen2046.github.io.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/kevinchen2046/kevinchen2046.github.io/issues"
+  },
+  "homepage": "https://github.com/kevinchen2046/kevinchen2046.github.io#readme",
+  "dependencies": {
+    "colors": "^1.4.0",
+    "showdown": "^2.1.0",
+    "simplebig": "^0.0.3"
+  }
+}
