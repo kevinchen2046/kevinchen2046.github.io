@@ -28,8 +28,9 @@ async function convertFolder(folder) {
 }
 
 async function exec() {
-    FileUtil.clearFolder(outFolder);
-    FileUtil.copyFolder("./css","./docs/css")
+    FileUtil.clearFolder(outFolder,"demo","css");
+    FileUtil.copyFolder("./demo","./docs/demo");
+    FileUtil.copyFolder("./css","./docs/css");
     convertFolder(sourceFolder);
 }
 

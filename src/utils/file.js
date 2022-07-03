@@ -18,7 +18,7 @@ module.exports = class FileUtil {
                 results = results.concat(FileUtil.getFiles(folderPath + name, exts));
             } else {
                 if (!!exts && exts.length) {
-                    let ext=path.extname(name);
+                    let ext = path.extname(name);
                     if (exts.indexOf(ext) >= 0) {
                         results.push(folderPath + name);
                     }
@@ -171,13 +171,14 @@ module.exports = class FileUtil {
     * 清空文件夹
     * @param folderPath 文件夹路径
     */
-    static clearFolder(folderPath) {
+    static clearFolder(folderPath, ...excepts) {
         if (!fs.existsSync(folderPath)) return;
         if (!fs.statSync(folderPath).isDirectory()) {
             return;
         }
         var files = fs.readdirSync(folderPath);
         for (var name of files) {
+            if (excepts.indexOf(name) >= 0) return;
             var curPath = folderPath + '/' + name;
             if (fs.statSync(curPath).isDirectory()) {
                 FileUtil.clearFolder(curPath);
@@ -270,7 +271,7 @@ module.exports = class FileUtil {
 }
 class FileModifyHandler {
     constructor(filepath) {
-        this.filepath=filepath;
+        this.filepath = filepath;
         this.content = fs.readFileSync(filepath, "utf-8");
     }
     exec(method) {
