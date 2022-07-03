@@ -20,13 +20,16 @@ async function convertFolder(folder) {
         }
         let content = fs.readFileSync(filepath, "utf-8");
         filepath = filepath.replace(".md", ".html").replace(sourceFolder, outFolder);
-        //<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
-        fs.writeFileSync(filepath, converter.makeHtml(content), "utf-8");
+
+        fs.writeFileSync(filepath,
+            `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
+        ${converter.makeHtml(content)}`, "utf-8");
     };
 }
 
 async function exec() {
     FileUtil.clearFolder(outFolder);
+    FileUtil.copyFolder("./css","./docs/css")
     convertFolder(sourceFolder);
 }
 
