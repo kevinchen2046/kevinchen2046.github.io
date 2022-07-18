@@ -1,37 +1,94 @@
 const fs = require("fs");
+const path = require("path");
 const showdown = require('showdown');
 const FileUtil = require('./utils/file');
+const { FileHash } = require("./utils/fileHash");
+
 let converter = new showdown.Converter();
 
-let sourceFolder = `./markdown`;
-let outFolder = `./docs`;
 
-async function convertFolder(folder) {
-    let __outfolder = folder.replace(sourceFolder, outFolder);
-    if (!fs.existsSync(__outfolder)) {
-        fs.mkdirSync(__outfolder);
+/**
+ * 
+ * @param {*} sourceFolder 
+ * @param {*} outFolder 
+ * @param {{ext:string,getFileName:(filename:string)=>string,readFile:()=>any}[]} fileFilters?
+ */
+async function syncFolder(sourceFolder, outFolder, fileFilters) {
+    function filterName(filename) {
+        if (fileFilters && fileFilters.length) {
+            for (filter of fileFilters) {
+                if (path.extname(filename) == filter.ext) {
+                    filename = filter.getFileName(filename);
+                    break;
+                }
+            }
+        }
+        return filename;
     }
-    let files = fs.readdirSync(folder);
-    for (let file of files) {
-        let filepath = `${folder}/${file}`;
-        if (fs.statSync(filepath).isDirectory()) {
-            convertFolder(filepath);
+    function filterContent(filepath) {
+        let content = null;
+        if (fileFilters && fileFilters.length) {
+            for (filter of fileFilters) {
+                if (path.extname(filepath) == filter.ext) {
+                    content = filter.readFile(filepath);
+                    break;
+                }
+            }
+        }
+        if (!content) content = fs.readFileSync(filepath);
+        return content;
+    }
+    let sourcefiles = fs.readdirSync(sourceFolder);
+    let outfiles = fs.readdirSync(outFolder);
+    let sourceFilterFiles = sourcefiles.map(v => filterName(v));
+    for (let i = 0; i < outfiles.length; i++) {
+        let outfile = outfiles[i];
+        if (sourceFilterFiles.indexOf(outfile) == -1) {
+            if (fs.statSync(`${outFolder}/${outfile}`).isDirectory) {
+                FileUtil.removeFolder(`${outFolder}/${outfile}`);
+            } else {
+                fs.unlinkSync(`${outFolder}/${outfile}`);
+            }
+            outfiles.splice(i, 1);
+            i--;
+        }
+    }
+    for (let sourcefile of sourcefiles) {
+        if (fs.statSync(`${sourceFolder}/${sourcefile}`).isDirectory()) {
+            if (!fs.existsSync(`${outFolder}/${sourcefile}`)) {
+                fs.mkdirSync(`${outFolder}/${sourcefile}`)
+            }
+            syncFolder(`${sourceFolder}/${sourcefile}`, `${outFolder}/${sourcefile}`, fileFilters);
             continue;
         }
-        let content = fs.readFileSync(filepath, "utf-8");
-        filepath = filepath.replace(".md", ".html").replace(sourceFolder, outFolder);
+        let fileContent = filterContent(`${sourceFolder}/${sourcefile}`);
+        sourcefile = filterName(sourcefile);
+        if (outfiles.indexOf(sourcefile) >= 0) {
+            if (FileHash.hashContentSync(fileContent) != FileHash.hashFileSync(`${outFolder}/${sourcefile}`)) {
+                fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);
+            } else {
+                console.log(`已存在相同文件:${sourceFolder}/${sourcefile}`);
+            }
+        } else {
+            fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);
+        }
+    }
 
-        fs.writeFileSync(filepath,
-            `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
-        ${converter.makeHtml(content)}`, "utf-8");
-    };
 }
-
 async function exec() {
-    FileUtil.clearFolder(outFolder,"demo","css");
-    FileUtil.copyFolder("./demo","./docs/demo");
-    FileUtil.copyFolder("./css","./docs/css");
-    convertFolder(sourceFolder);
+    syncFolder(`./www`, `./docs`, [{
+        ext: ".md",
+        getFileName:(filepath)=>{
+            return path.basename(filepath).replace(".md", ".html")
+        },
+        readFile: (filepath) => {
+            let content = fs.readFileSync(filepath, "utf-8");
+            return `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
+<body>
+${converter.makeHtml(content)}
+</body>`
+        }
+    }]);
 }
 
 exec();

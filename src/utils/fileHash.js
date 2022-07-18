@@ -14,16 +14,17 @@ class FileHash {
     /**
      * promise
      * @param filePath
-     * @param algorithm
+     * @param {AlgorithmType} algorithm?
      * @returns {Promise<any>}
      */
-    static Sha256(filePath, algorithm) {
+    static hashFile(filePath, algorithm) {
+        if (algorithm == undefined) algorithm = AlgorithmType.SHA256;
         return new Promise((resolve, reject) => {
             if (!fs.existsSync(filePath)) {
                 reject("the file does not exist, make sure your file is correct!");
                 return;
             }
-            if (!algorithmType.hasOwnProperty(algorithm)) {
+            if (!AlgorithmType.hasOwnProperty(algorithm)) {
                 reject("nonsupport algorithm, make sure your algorithm is [SHA256,SHA1,MD5] !");
                 return;
             }
@@ -48,17 +49,26 @@ class FileHash {
     /**
      * async
      * @param filePath
-     * @param algorithm
+     * @param {AlgorithmType} algorithm?
      * @returns {string|Error}
      */
-    static sha256Async(filePath, algorithm) {
+    static hashFileSync(filePath, algorithm) {
         if (!fs.existsSync(filePath)) {
             return new Error("the file does not exist, make sure your file is correct!");
         }
-        if (!algorithmType.hasOwnProperty(algorithm)) {
+        let buffer = fs.readFileSync(filePath);
+        return FileHash.hashContentSync(buffer, algorithm);
+    }
+
+    static hashContentSync(content, algorithm) {
+        if (algorithm == undefined) algorithm = AlgorithmType.SHA256;
+        if (!AlgorithmType.hasOwnProperty(algorithm)) {
             return new Error("nonsupport algorithm, make sure your algorithm is [SHA256,SHA1,MD5] !");
         }
-        let buffer = fs.readFileSync(filePath);
+        return FileHash.__getHash(content, algorithm);
+    }
+
+    static __getHash(buffer, algorithm) {
         let hash = crypto.createHash(algorithm.toLowerCase());
         hash.update(buffer)
         let final = hash.digest('hex');
