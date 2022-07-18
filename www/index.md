@@ -1,1 +1,1 @@
-## Hello , my dear page!
+[Blog](blog/index.html)

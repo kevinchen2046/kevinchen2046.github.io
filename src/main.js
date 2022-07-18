@@ -6,14 +6,18 @@ const { FileHash } = require("./utils/fileHash");
 
 let converter = new showdown.Converter();
 
-
 /**
- * 
+ * 同步文件夹
  * @param {*} sourceFolder 
  * @param {*} outFolder 
- * @param {{ext:string,getFileName:(filename:string)=>string,readFile:()=>any}[]} fileFilters?
+ * @param {*} options?
+ * @param {{ext:string,getFileName:(filename:string)=>string,readFile:()=>any}[]} options.filters
+ * @param {string[]} options.excepts
  */
-async function syncFolder(sourceFolder, outFolder, fileFilters) {
+async function syncFolder(sourceFolder, outFolder, options) {
+    if (!options) options = {};
+    let fileFilters = options.filters;
+    let exceptFiles = options.excepts;
     function filterName(filename) {
         if (fileFilters && fileFilters.length) {
             for (filter of fileFilters) {
@@ -44,6 +48,7 @@ async function syncFolder(sourceFolder, outFolder, fileFilters) {
     for (let i = 0; i < outfiles.length; i++) {
         let outfile = outfiles[i];
         if (sourceFilterFiles.indexOf(outfile) == -1) {
+            if (exceptFiles.indexOf(`${outFolder}/${outfile}`)>=0) continue;
             if (fs.statSync(`${outFolder}/${outfile}`).isDirectory) {
                 FileUtil.removeFolder(`${outFolder}/${outfile}`);
             } else {
@@ -58,7 +63,7 @@ async function syncFolder(sourceFolder, outFolder, fileFilters) {
             if (!fs.existsSync(`${outFolder}/${sourcefile}`)) {
                 fs.mkdirSync(`${outFolder}/${sourcefile}`)
             }
-            syncFolder(`${sourceFolder}/${sourcefile}`, `${outFolder}/${sourcefile}`, fileFilters);
+            syncFolder(`${sourceFolder}/${sourcefile}`, `${outFolder}/${sourcefile}`, options);
             continue;
         }
         let fileContent = filterContent(`${sourceFolder}/${sourcefile}`);
@@ -73,22 +78,24 @@ async function syncFolder(sourceFolder, outFolder, fileFilters) {
             fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);
         }
     }
-
 }
 async function exec() {
-    syncFolder(`./www`, `./docs`, [{
-        ext: ".md",
-        getFileName:(filepath)=>{
-            return path.basename(filepath).replace(".md", ".html")
-        },
-        readFile: (filepath) => {
-            let content = fs.readFileSync(filepath, "utf-8");
-            return `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
-<body>
-${converter.makeHtml(content)}
-</body>`
-        }
-    }]);
+    syncFolder(`./www`, `./docs`, {
+        excepts: ["./docs/blog"],
+        filters: [{
+            ext: ".md",
+            getFileName: (filepath) => {
+                return path.basename(filepath).replace(".md", ".html")
+            },
+            readFile: (filepath) => {
+                let content = fs.readFileSync(filepath, "utf-8");
+                return `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
+    <body>
+    ${converter.makeHtml(content)}
+    </body>`
+            }
+        }]
+    });
 }
 
 exec();
