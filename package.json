@@ -22,7 +22,9 @@
   "homepage": "https://github.com/kevinchen2046/kevinchen2046.github.io#readme",
   "dependencies": {
     "colors": "^1.4.0",
+    "download": "^8.0.0",
     "showdown": "^2.1.0",
-    "simplebig": "^0.0.3"
+    "simplebig": "^0.0.3",
+    "translate": "^1.4.1"
   }
 }
