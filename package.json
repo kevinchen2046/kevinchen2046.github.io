@@ -7,7 +7,8 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node src/main"
+    "build": "node src/main",
+    "preview":"http-server ./docs -c-1"
   },
   "repository": {
     "type": "git",
