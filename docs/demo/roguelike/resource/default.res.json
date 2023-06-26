@@ -1,16 +1,11 @@
 {
 	"groups": [
 		{
-			"keys": "brand_png,icon_png",
+			"keys": "icon_png",
 			"name": "preload"
 		}
 	],
 	"resources": [
-		{
-			"url": "brand.png",
-			"type": "image",
-			"name": "brand_png"
-		},
 		{
 			"url": "icon.png",
 			"type": "image",
