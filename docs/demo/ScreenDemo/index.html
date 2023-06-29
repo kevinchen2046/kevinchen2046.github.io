@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="utf-8">
-    <title>Egret</title>
+    <title>Demo</title>
     <meta name="viewport" content="width=device-width,initial-scale=1, minimum-scale=1, maximum-scale=1, user-scalable=no" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="full-screen" content="true" />
@@ -13,7 +13,7 @@
     <style>
         html, body {
             -ms-touch-action: none;
-            background: #888888;
+            background: #000000;
             padding: 0;
             border: 0;
             margin: 0;
@@ -27,14 +27,19 @@
          data-entry-class="Main"
          data-orientation="auto"
          data-scale-mode="fixedNarrow"
-         data-frame-rate="30"
+         data-frame-rate="60"
          data-content-width="640"
          data-content-height="1136"
-         data-show-paint-rect="false"
-         data-multi-fingered="2"
-         data-show-fps="false" data-show-log="false"
+         data-multi-fingered="1"
+         data-show-fps="true" data-show-log="false"
          data-show-fps-style="x:0,y:0,size:12,textColor:0xffffff,bgAlpha:0.9">
     </div>
+<script src="https://unpkg.com/vconsole@latest/dist/vconsole.min.js"></script>
+<script>
+
+  // VConsole 默认会挂载到 `window.VConsole` 上
+//   var vConsole = new window.VConsole();
+</script>
 <script>
     var loadScript = function (list, callback) {
         var loaded = 0;
@@ -59,11 +64,25 @@
         s.addEventListener('load', function () {
             s.parentNode.removeChild(s);
             s.removeEventListener('load', arguments.callee, false);
-            callback();
+            callback&&callback();
         }, false);
         document.body.appendChild(s);
     };
+    
+    var config={
+        platform:'debug',
+        language:'cn',
+        release:false,
+        adsTest:true
+    };
 
+    switch(config.platform){
+        case "facebook":
+            loadSingleScript('https://connect.facebook.net/en_US/fbinstant.6.3.js');
+        break;
+    }
+</script>
+<script>
     var xhr = new XMLHttpRequest();
     xhr.open('GET', './manifest.json?v=' + Math.random(), true);
     xhr.addEventListener("load", function () {
