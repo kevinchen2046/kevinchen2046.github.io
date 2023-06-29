@@ -1,0 +1,216 @@
+{
+    "shockwave":{
+        "amplitude": 30.0,
+        "wavelength": 160.0,
+        "brightness": 1.0,
+        "speed": 500.0,
+        "radius": -1.0
+    },
+    "zoom-blur":{
+        "strength": 0.1,
+        "center": [0, 0],
+        "innerRadius": 0,
+        "radius": -1,
+        "maxKernelSize": 32
+    },
+    "twist":{
+        "radius": 200,
+        "angle": 4,
+        "padding": 20,
+        "offset": {"x":0,"y":0}
+    },
+    "tilt-shift":{
+        "blur": 100,
+        "gradientBlur": 600,
+        "start": "undefined",
+        "end": "undefined"
+    },
+    "simple-lightmap":{
+        "uLightmap":"{sampler2D}",
+        "filterArea":{"x":0,"y":0,"z":0,"w":0},
+        "dimensions":{"x":0,"y":0},
+        "ambientColor":{"x":0,"y":0,"z":0,"w":0}
+    },
+    "rgb-split":{
+        "red":{"x":-10,"y":0},
+        "green":{"x":0,"y":10},
+        "blue":{"x":0,"y":0}
+    },
+    "reflection":{
+        "mirror": true,
+        "boundary": 0.5,
+        "amplitude": {"x":0,"y":20},
+        "waveLength": {"x":30,"y":100},
+        "alpha": {"x":1,"y":1},
+        "time": 0
+    },
+    "radial-blur":{
+        "uRadian": 1.0,
+        "uCenter":{"x":0,"y":0},
+        "uRadius": 1.0,
+        "uKernelSize": 1.0
+    },
+    "pixelate":{
+        "size":{"x":10,"y":10}
+    },
+    "outline":{
+        "uAlpha": 1.0,
+        "uThickness":{"x":0,"y":0},
+        "uColor":{"x":0,"y":0,"z":0,"w":0},
+        "uKnockout":false,
+        "padding":1
+    },
+    "old-film":{
+        "dimensions":{"x":"{screenWidth}","y":"{screenHeight}"},
+        "sepia": 0.3,
+        "noise": 0.3,
+        "noiseSize": 1.0,
+        "scratch": 0.5,
+        "scratchDensity": 0.3,
+        "scratchWidth": 1.0,
+        "vignetting": 0.3,
+        "vignettingAlpha": 1.0,
+        "vignettingBlur": 0.3
+    },
+    "motion-blur":{
+        "uVelocity":{"x":0,"y":0},
+        "uKernelSize":5,
+        "uOffset":0
+    },
+    "kawase-blur":{
+        "uOffset":{"x":0,"y":0},
+        "filterClamp":{"x":0,"y":0,"z":0,"w":0}
+    },
+    "hsl-adjustment":{
+        "hue": 0,
+        "saturation": 0,
+        "lightness": 0,
+        "colorize": false,
+        "alpha": 1
+    },
+    "grayscale":{},
+    "godray":{
+        "angle": 30,
+        "gain": 0.5,
+        "lacunarity": 2.5,
+        "time": 0,
+        "parallel": true,
+        "center": {"x":0,"y":0},
+        "alpha": 1
+    },
+    "glow":{
+        "distance": 10,
+        "outerStrength": 4,
+        "innerStrength": 0,
+        "color": {"x":1,"y":1,"z":1},
+        "quality": 0.1,
+        "knockout": false,
+        "alpha": 1
+    },
+    "glitch":{
+        "slices": 5,
+        "offset": 100,
+        "direction": 0,
+        "fillMode": 0,
+        "average": false,
+        "seed": 0,
+        "red": {"x":0,"y":0},
+        "green": {"x":0,"y":0},
+        "blue": {"x":0,"y":0},
+        "minSize": 8,
+        "sampleSize": 512
+    },
+    "emboss":{
+        "strength":5
+    },
+    "drop-shadow":{
+        "offset": { "x": 4, "y": 4 },
+        "color": {"x":0,"y":0,"z":0},
+        "alpha": 0.5,
+        "shadowOnly": false,
+        "kernels": null,
+        "blur": 2,
+        "quality": 3,
+        "pixelSize": 1,
+        "resolution": 1
+    },
+    "dot":{
+        "angle":0,
+        "scale":1,
+        "grayscale":true
+    },
+    "crt":{
+        "curvature": 1.0,
+        "lineWidth": 1.0,
+        "lineContrast": 0.25,
+        "verticalLine": false,
+        "noise": 0.0,
+        "noiseSize": 1.0,
+        "seed": 0.0,
+        "vignetting": 0.3,
+        "vignettingAlpha": 1.0,
+        "vignettingBlur": 0.3,
+        "time": 0.0
+    },
+    "cross-hatch":{},
+    "convolution":{
+        "texelSize":1,
+        "matrix":[0,0,0,0,0,0,0,0,0]
+    },
+    "color-replace":{
+        "originalColor":{"x":1,"y":0,"z":0},
+        "newColor":{"x":0,"y":0,"z":0},
+        "epsilon":0.4
+    },
+    "color-overlay":{
+        "color":{"x":0,"y":0,"z":0},
+        "alpha":1
+    },
+    "color-map":{
+        "colorMap":"{sampler2D}",
+        "_mix":1,
+        "_size":0,
+        "_sliceSize":0,
+        "_slicePixelSize":0,
+        "_sliceInnerSize":0
+    },
+    "bulge-pinch":{
+        "center": {"x":0.5, "y":0.5},
+        "radius": 100,
+        "strength": 1
+    },
+    "bevel":{
+        "rotation": 45,
+        "thickness": 2,
+        "lightColor": {"x":1,"y":1,"z":1},
+        "lightAlpha": 0.7,
+        "shadowColor": {"x":0,"y":0,"z":0},
+        "shadowAlpha": 0.7
+    },
+    "ascii":{
+        "pixelSize":8
+    },
+    "advanced-bloom":{
+        "threshold": 0.5,
+        "bloomScale": 1.0,
+        "brightness": 1.0,
+        "kernels": null,
+        "blur": 8,
+        "quality": 4,
+        "pixelSize": 1,
+        "resolution":1
+    },
+    "extract-brightness":{
+        "threshold":0.5
+    },
+    "adjustment":{
+        "gamma": 1,
+        "saturation": 1,
+        "contrast": 1,
+        "brightness": 1,
+        "red": 1,
+        "green": 1,
+        "blue": 1,
+        "alpha": 1
+    }
+}
