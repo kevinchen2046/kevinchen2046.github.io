@@ -1,0 +1,24 @@
+{
+	"initial": [
+		"js/egret.min_1b571385.js",
+		"js/egret.web.min_401f9695.js",
+		"js/assetsmanager.min_52b82f60.js",
+		"js/game.min_16249d0f.js",
+		"js/tween.min_6c5a88f9.js",
+		"js/promise.min_83a6a5d.js",
+		"js/dragonBones.min_6252b9c4.js",
+		"js/rawinflate.min_a0796587.js",
+		"js/fairygui.min_bd2d9e51.js",
+		"js/particle.min_27fe451d.js",
+		"js/vitamin.min_61ea47ba.js",
+		"js/platform.min_7a674d15.js",
+		"js/shader.min_9f5e9bca.js",
+		"js/tiled.min_16ea4b52.js",
+		"js/keyboard.min_7e10e13d.js",
+		"js/pathfinding.min_c3ae2a64.js",
+		"js/k25d.min_fce69cd5.js"
+	],
+	"game": [
+		"js/main.min_ea8a77df.js"
+	]
+}
