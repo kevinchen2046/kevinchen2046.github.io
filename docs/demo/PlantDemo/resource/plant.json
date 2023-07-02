@@ -1,0 +1,309 @@
+{
+	"file": "plant.png",
+	"mc":{},
+	"res": {
+		"box1.png": {
+			"x":1,
+			"y":69,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"box2.png": {
+			"x":19,
+			"y":69,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"box3.png": {
+			"x":37,
+			"y":69,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"box4.png": {
+			"x":55,
+			"y":69,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"box5.png": {
+			"x":73,
+			"y":69,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"box6.png": {
+			"x":103,
+			"y":1,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"bullet.png": {
+			"x":69,
+			"y":35,
+			"w":16,
+			"h":32,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 32
+		},
+		"circel1.png": {
+			"x":1,
+			"y":1,
+			"w":32,
+			"h":32,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 32,
+			"sourceH": 32
+		},
+		"circel2.png": {
+			"x":35,
+			"y":1,
+			"w":32,
+			"h":32,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 32,
+			"sourceH": 32
+		},
+		"circel3.png": {
+			"x":1,
+			"y":35,
+			"w":32,
+			"h":32,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 32,
+			"sourceH": 32
+		},
+		"circel4.png": {
+			"x":35,
+			"y":35,
+			"w":32,
+			"h":32,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 32,
+			"sourceH": 32
+		},
+		"circel5.png": {
+			"x":69,
+			"y":1,
+			"w":32,
+			"h":32,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 32,
+			"sourceH": 32
+		},
+		"plant1.png": {
+			"x":103,
+			"y":19,
+			"w":16,
+			"h":16,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 16,
+			"sourceH": 16
+		},
+		"rect1.png": {
+			"x":103,
+			"y":79,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"rect2.png": {
+			"x":111,
+			"y":79,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"rect3.png": {
+			"x":45,
+			"y":87,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"rect4.png": {
+			"x":53,
+			"y":87,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"rect5.png": {
+			"x":61,
+			"y":87,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"rect6.png": {
+			"x":69,
+			"y":87,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"rect7.png": {
+			"x":77,
+			"y":87,
+			"w":6,
+			"h":6,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 6
+		},
+		"tile_0019.png": {
+			"x":103,
+			"y":37,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0020.png": {
+			"x":37,
+			"y":87,
+			"w":6,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 6,
+			"sourceH": 12
+		},
+		"tile_0021.png": {
+			"x":103,
+			"y":51,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0022.png": {
+			"x":103,
+			"y":65,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0023.png": {
+			"x":87,
+			"y":35,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0031.png": {
+			"x":87,
+			"y":49,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0032.png": {
+			"x":91,
+			"y":69,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0033.png": {
+			"x":1,
+			"y":87,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0034.png": {
+			"x":13,
+			"y":87,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		},
+		"tile_0035.png": {
+			"x":25,
+			"y":87,
+			"w":10,
+			"h":12,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 10,
+			"sourceH": 12
+		}
+	},
+	"meta":{
+		"app": "https://github.com/kevinchen2046/spritesheet-game"
+	}
+}

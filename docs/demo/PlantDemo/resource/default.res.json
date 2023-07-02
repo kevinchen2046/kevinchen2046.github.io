@@ -1,0 +1,25 @@
+{
+	"groups": [
+		{
+			"keys": "icon_png,game_atlas0,game",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "icon.png",
+			"type": "image",
+			"name": "icon_png"
+		},
+		{
+			"url": "gui/game.txt",
+			"type": "bin",
+			"name": "game"
+		},
+		{
+			"url": "gui/game_atlas0.png",
+			"type": "image",
+			"name": "game_atlas0"
+		}
+	]
+}
