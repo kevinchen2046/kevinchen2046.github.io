@@ -1,0 +1,149 @@
+{
+	"file": "snake.png",
+	"mc":{},
+	"res": {
+		"frame0001.png": {
+			"x":1,
+			"y":1,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0002.png": {
+			"x":67,
+			"y":1,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0003.png": {
+			"x":1,
+			"y":67,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0004.png": {
+			"x":67,
+			"y":67,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0005.png": {
+			"x":133,
+			"y":1,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0006.png": {
+			"x":133,
+			"y":67,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0007.png": {
+			"x":1,
+			"y":133,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0008.png": {
+			"x":67,
+			"y":133,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0009.png": {
+			"x":133,
+			"y":133,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0010.png": {
+			"x":199,
+			"y":1,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0011.png": {
+			"x":199,
+			"y":67,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0012.png": {
+			"x":199,
+			"y":133,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0013.png": {
+			"x":1,
+			"y":199,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		},
+		"frame0014.png": {
+			"x":67,
+			"y":199,
+			"w":64,
+			"h":64,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 64,
+			"sourceH": 64
+		}
+	},
+	"meta":{
+		"app": "https://github.com/kevinchen2046/spritesheet-game"
+	}
+}
