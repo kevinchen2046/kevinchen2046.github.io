@@ -10,15 +10,16 @@
 		"js/rawinflate.min_a0796587.js",
 		"js/fairygui.min_bd2d9e51.js",
 		"js/particle.min_27fe451d.js",
-		"js/vitamin.min_fbf6e267.js",
+		"js/vitamin.min_70a1f8a3.js",
 		"js/platform.min_7f529d3e.js",
 		"js/shader.min_9f5e9bca.js",
 		"js/tiled.min_f1da3114.js",
 		"js/keyboard.min_7e10e13d.js",
 		"js/pathfinding.min_c3ae2a64.js",
-		"js/k25d.min_fce69cd5.js"
+		"js/k25d.min_fce69cd5.js",
+		"js/jsyaml.min_e375b289.js"
 	],
 	"game": [
-		"js/main.min_dc7d464b.js"
+		"js/main.min_a7087924.js"
 	]
 }
