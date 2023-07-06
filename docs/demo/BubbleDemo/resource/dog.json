@@ -1,0 +1,379 @@
+{
+	"file": "dog.png",
+	"mc":{},
+	"res": {
+		"frame0001.png": {
+			"x":1,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0002.png": {
+			"x":143,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0003.png": {
+			"x":1,
+			"y":135,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0004.png": {
+			"x":143,
+			"y":135,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0005.png": {
+			"x":285,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0006.png": {
+			"x":285,
+			"y":135,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0007.png": {
+			"x":1,
+			"y":269,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0008.png": {
+			"x":143,
+			"y":269,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0009.png": {
+			"x":285,
+			"y":269,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0010.png": {
+			"x":427,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0011.png": {
+			"x":427,
+			"y":135,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0012.png": {
+			"x":427,
+			"y":269,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0013.png": {
+			"x":1,
+			"y":403,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0014.png": {
+			"x":143,
+			"y":403,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0015.png": {
+			"x":285,
+			"y":403,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0016.png": {
+			"x":427,
+			"y":403,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0017.png": {
+			"x":569,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0018.png": {
+			"x":569,
+			"y":135,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0019.png": {
+			"x":569,
+			"y":269,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0020.png": {
+			"x":569,
+			"y":403,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0021.png": {
+			"x":1,
+			"y":537,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0022.png": {
+			"x":143,
+			"y":537,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0023.png": {
+			"x":285,
+			"y":537,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0024.png": {
+			"x":427,
+			"y":537,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0025.png": {
+			"x":569,
+			"y":537,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0026.png": {
+			"x":711,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0027.png": {
+			"x":711,
+			"y":135,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0028.png": {
+			"x":711,
+			"y":269,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0029.png": {
+			"x":711,
+			"y":403,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0030.png": {
+			"x":711,
+			"y":537,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0031.png": {
+			"x":1,
+			"y":671,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0032.png": {
+			"x":143,
+			"y":671,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0033.png": {
+			"x":285,
+			"y":671,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0034.png": {
+			"x":427,
+			"y":671,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0035.png": {
+			"x":569,
+			"y":671,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0036.png": {
+			"x":711,
+			"y":671,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		},
+		"frame0037.png": {
+			"x":853,
+			"y":1,
+			"w":140,
+			"h":132,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 140,
+			"sourceH": 132
+		}
+	},
+	"meta":{
+		"app": "https://github.com/kevinchen2046/spritesheet-game"
+	}
+}
