@@ -10,7 +10,7 @@
 		"js/rawinflate.min_a0796587.js",
 		"js/fairygui.min_bd2d9e51.js",
 		"js/particle.min_27fe451d.js",
-		"js/vitamin.min_3791cd93.js",
+		"js/vitamin.min_470e60db.js",
 		"js/platform.min_7f529d3e.js",
 		"js/shader.min_1ace0e3f.js",
 		"js/tiled.min_f1da3114.js",
@@ -22,6 +22,6 @@
 		"js/poly2tri.min_9ec1960d.js"
 	],
 	"game": [
-		"js/main.min_cc00cdbe.js"
+		"js/main.min_c761680c.js"
 	]
 }
