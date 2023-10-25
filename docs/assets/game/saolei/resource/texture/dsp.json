@@ -1,0 +1,129 @@
+{
+	"file": "dsp.png",
+	"mc":{},
+	"res": {
+		"frame10.png": {
+			"x":1,
+			"y":389,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame1.png": {
+			"x":259,
+			"y":1,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame11.png": {
+			"x":1,
+			"y":195,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame12.png": {
+			"x":259,
+			"y":195,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame13.png": {
+			"x":517,
+			"y":1,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame14.png": {
+			"x":517,
+			"y":195,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame9.png": {
+			"x":775,
+			"y":389,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame16.png": {
+			"x":259,
+			"y":389,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame5.png": {
+			"x":517,
+			"y":389,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame6.png": {
+			"x":775,
+			"y":1,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame7.png": {
+			"x":775,
+			"y":195,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		},
+		"frame15.png": {
+			"x":1,
+			"y":1,
+			"w":256,
+			"h":192,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 256,
+			"sourceH": 192
+		}
+	},
+	"meta":{
+		"app": "https://github.com/kevinchen2046/spritesheet-game"
+	}
+}
