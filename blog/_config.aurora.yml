@@ -56,14 +56,14 @@ menu:
     name: 'Demo'
     path: '/page/demo'
     i18n:
-      cn: '演示'
-      en: 'Demo'
+      cn: 演示
+      en: Demo
   Game:
     name: 'Game'
     path: '/page/game'
     i18n:
-      cn: '游戏'
-      en: 'Game'
+      cn: 游戏
+      en: Game
   About: true
   Tags: false
   Archives: false
@@ -87,6 +87,7 @@ theme:
 #! @docs https://aurora.tridiamond.tech/guide/social.html
 #! ---------------------------------------------------------------
 socials:
+  github: 'https://github.com/kevinchen2046'
   customs:
   ##! Example:
   ##! --- Using SVG
