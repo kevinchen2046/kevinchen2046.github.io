@@ -1,0 +1,102 @@
+[
+  {
+    "floor": [
+      "back1",
+      "back2"
+    ],
+    "tile": [
+      "box0"
+    ],
+    "tilemark": "mark1",
+    "tilequestion": "question1",
+    "wall": null,
+    "bomb": "boom1",
+    "boom": "boom3",
+    "boommark": "boom4"
+  },
+  {
+    "tile": [
+      "box0"
+    ]
+  },
+  {
+    "tile": [
+      "box1"
+    ]
+  },
+  {
+    "tile": [
+      "box0",
+      "box1"
+    ]
+  },
+  {
+    "tile": [
+      "box2"
+    ]
+  },
+  {
+    "tile": [
+      "box3"
+    ]
+  },
+  {
+    "tile": [
+      "box2",
+      "box3"
+    ]
+  },
+  {
+    "tile": [
+      "box4"
+    ]
+  },
+  {
+    "tile": [
+      "box5"
+    ]
+  },
+  {
+    "tile": [
+      "box4",
+      "box5"
+    ]
+  },
+  {
+    "tile": [
+      "box6"
+    ]
+  },
+  {
+    "tile": [
+      "box2",
+      "box3",
+      "box4",
+      "box5"
+    ]
+  },
+  {
+    "floor": [
+      "floor_5",
+      "floor_10"
+    ],
+    "tile": [
+      "floor_2"
+    ],
+    "tilemark": "floor_flag",
+    "tilequestion": "floor_question",
+    "wall": {
+      "top_left": "wall_top_inner_left",
+      "top": "wall_top_1",
+      "top_right": "wall_top_inner_right",
+      "right": "wall_top_right",
+      "bottom_right": "wall_bottom_inner_right",
+      "bottom": "wall_bottom",
+      "bottom_left": "wall_bottom_inner_left",
+      "left": "wall_top_left"
+    },
+    "bomb": "boom1",
+    "boom": "boom3",
+    "boommark": "boom4"
+  }
+]

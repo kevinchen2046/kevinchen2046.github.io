@@ -7,7 +7,7 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "node src/main",
+    "build": "cd blog & npm run build & cd .. & node src/main",
     "preview":"http-server ./docs -c-1"
   },
   "repository": {

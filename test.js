@@ -1,4 +1,4 @@
-let content=`
+let content = `
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,4 +14,6 @@ let content=`
     <link rel="stylesheet" href="https://unpkg.com/gitalk@^1.8.0/dist/gitalk.css" /><!-- hexo injector head_end end -->
     <meta name="generator" content="Hexo 6.3.0">
 </head>`;
-console.log(content.replace(/\=\"\/static\//g, "\=\".\/static\/"));
+let fs = require("fs");
+let path = require("path");
+console.log(path.resolve("E:/project/kevinchen-github/kevinchen2046.github.io/blog/", "../docs"));

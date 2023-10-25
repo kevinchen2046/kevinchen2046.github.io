@@ -42,13 +42,14 @@ async function syncFolder(sourceFolder, outFolder, options) {
         if (!content) content = fs.readFileSync(filepath);
         return content;
     }
+    if (!fs.existsSync(outFolder)) fs.mkdirSync(outFolder);
     let sourcefiles = fs.readdirSync(sourceFolder);
     let outfiles = fs.readdirSync(outFolder);
     let sourceFilterFiles = sourcefiles.map(v => filterName(v));
     for (let i = 0; i < outfiles.length; i++) {
         let outfile = outfiles[i];
         if (sourceFilterFiles.indexOf(outfile) == -1) {
-            if (exceptFiles.indexOf(`${outFolder}/${outfile}`)>=0) continue;
+            if (exceptFiles.indexOf(`${outFolder}/${outfile}`) >= 0) continue;
             if (fs.statSync(`${outFolder}/${outfile}`).isDirectory) {
                 FileUtil.removeFolder(`${outFolder}/${outfile}`);
             } else {
@@ -80,22 +81,25 @@ async function syncFolder(sourceFolder, outFolder, options) {
     }
 }
 async function exec() {
-    syncFolder(`./www`, `./docs`, {
-        excepts: ["./docs/blog"],
-        filters: [{
-            ext: ".md",
-            getFileName: (filepath) => {
-                return path.basename(filepath).replace(".md", ".html")
-            },
-            readFile: (filepath) => {
-                let content = fs.readFileSync(filepath, "utf-8");
-                return `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
-    <body>
-    ${converter.makeHtml(content)}
-    </body>`
-            }
-        }]
-    });
+    console.log("开始同步资源....")
+    syncFolder(`./blog/assets`, `./docs/assets`);
+    // syncFolder(`./www`, `./docs`, {
+    //     excepts: ["./docs/blog"],
+    //     filters: [{
+    //         ext: ".md",
+    //         getFileName: (filepath) => {
+    //             return path.basename(filepath).replace(".md", ".html")
+    //         },
+    //         readFile: (filepath) => {
+    //             let content = fs.readFileSync(filepath, "utf-8");
+    //             return `<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
+    // <body>
+    // ${converter.makeHtml(content)}
+    // </body>`
+    //         }
+    //     }]
+    // });
+    console.log(`同步资源完成.`);
 }
 
 exec();

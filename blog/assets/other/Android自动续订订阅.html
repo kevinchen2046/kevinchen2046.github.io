@@ -1,0 +1,157 @@
+<head><link rel="stylesheet" href="https://unpkg.com/beautiful-markdown" /></head>
+    <body>
+    <h1 id="">开始</h1>
+<p><code>https://purchase.cordova.fovea.cc/use-cases/subscription-android</code></p>
+<h2 id="-1">编码部分</h2>
+<p>由于编码部分机翻的代码部分异常，影响阅读，所以创建此文档，以供查阅</p>
+<h3 id="initialization">Initialization 初始化</h3>
+<p>假设您从一个空白项目开始，我们将为本教程添加最少的HTML。
+让我们替换<code>www/index.html</code>中的<code>&lt;body&gt;</code>。包含以下内容的html文件。</p>
+<pre><code class="html language-html">&lt;body&gt; from the www/index.html file with the below.
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;meta http-equiv="Content-Security-Policy" content="default-src 'self' https://reeceipt-validator.fovea.cc 'unsafe-eval' 'unsafe-inline' gap:; style-src 'self' 'unsafe-inline'; media-src *"&gt;
+&lt;/head&gt;
+&lt;body style="margin-top: 50px"&gt;
+  &lt;script type="text/javascript" src="cordova.js"&gt;&lt;/script&gt;
+  &lt;script type="text/javascript" src="js/index.js"&gt;&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+</code></pre>
+<p>确保注释掉Cordova模板项目的CSS。
+我们通过将"unsafe-inline" <code>Content-Security-Policy(内容安全策略)</code> 添加到<code>default-src</code>部分来启用该策略。
+因为我们要用<a href="https://billing.fovea.cc/">Fovea.Billing</a>。计费时，您还需要将验证服务器添加到<code>default-src</code>，请在<a href="https://billing-dashboard.fovea.cc/setup/cordova">cordova安装文档</a>中找到。我的情况是(https://reeceipt-validation.fovea.cc).
+现在让我们编辑JavaScript文件<code>js/index.js</code>。用下面的代码替换内容，这将设置一个最小的应用程序框架，并根据应用程序状态将一些HTML呈现到页面中。</p>
+<pre><code class="js language-js">document.addEventListener('deviceready', onDeviceReady);
+function onDeviceReady() {
+    const state = {};
+    function setState(attr) {
+        Object.assign(state, attr);
+        render(state);
+    }
+    setState({
+        error: '',
+        status: 'Loading...',
+        product1: {},
+        product2: {},
+    });
+    //我们将在此处初始化应用内购买插件。
+    function render() {
+        const body = document.getElementsByTagName('body')[0];
+        body.innerHTML = `
+&lt;pre&gt; 
+${state.error}
+subscription: ${state.status}
+&lt;/pre&gt;
+        `;
+    }
+}
+</code></pre>
+<p>现在，让我们初始化应用内购买插件，如<code>onDeviceReady</code>函数所示。</p>
+<pre><code class="js language-js">    //我们应该首先注册我们的所有产品，否则我们不能在应用程序中使用它们。
+    store.register([{
+        id:    'my_subscription1',
+        type:   store.PAID_SUBSCRIPTION,
+    }, {
+        id:    'my_subscription2',
+        type:   store.PAID_SUBSCRIPTION,
+    }]);
+    //设置收据验证器服务。
+    store.validator = '&lt;&lt;&lt; YOUR_RECEIPT_VALIDATION_URL &gt;&gt;&gt;';
+    //显示错误10秒钟。
+    store.error(function(error) {
+        setState({ error: `ERROR ${error.code}: ${error.message}` });
+        setTimeout(function() {
+            setState({ error: `` });
+        }, 10000);
+    });
+    // 稍后，我们将在此处添加事件处理程序
+    // todo....
+    // 加载有关产品和采购的信息
+    store.refresh();
+}
+</code></pre>
+<p>这里有一点解释:</p>
+<p>我们首先注册ID为<code>my_subscription1</code>和<code>my_subscription2</code>的产品。
+我们将产品声明为可续费订阅(store.PAID_SUBSCRIPTION)。<a href="https://github.com/j3k0/cordova-plugin-purchase/blob/master/doc/api.md#registering-products">⇒API文档</a></p>
+<p>我们设置了到收据验证服务器的链接。如果您使用的是<a href="https://billing.fovea.cc/">Fovea.Billing</a>，您可以在<a href="https://billing-dashboard.fovea.cc/setup/cordova">这里</a>找到它。</p>
+<p>我们设置了一个错误处理程序。它将在屏幕顶部显示最后一条错误消息10秒钟。
+最后，我们执行所有产品状态的初始<code>refresh()</code>。<a href="https://github.com/j3k0/cordova-plugin-purchase/blob/master/doc/api.md#registering-products">⇒API文档</a></p>
+<blockquote>
+  <p>无论您的设置是什么，都应该确保在javascript应用程序启动后立即执行初始化代码。您必须准备好尽快处理IAP事件。</p>
+</blockquote>
+<h3 id="presentation">Presentation演示</h3>
+<p>现在让我们显示订阅状态，因为它是由本机平台提供的。在调用<code>store.refresh()</code>之前，我们将为更新事件添加一个处理程序:
+每当我们的产品状态发生变化时，就会调用此hander。</p>
+<pre><code class="js language-js">// 更新任何订阅产品时调用
+store.when('subscription').updated(function() {
+    const product1 = store.get('my_subscription1') || {};
+    const product2 = store.get('my_subscription2') || {};
+
+    let status = 'Please subscribe below';
+    if (product1.owned || product2.owned)
+        status = 'Subscribed';
+    else if (product1.state === 'approved' || product2.state === 'approved')
+        status = 'Processing...';
+
+    setState({ product1, product2, status });
+});
+</code></pre>
+<p>现在，我们可以通过<code>render()</code>函数显示有关产品的一些信息：</p>
+<pre><code class="js language-js">function render() {
+    const purchaseProduct1 = '';
+    const purchaseProduct2 = '';
+    const body = document.getElementsByTagName('body')[0];
+    body.innerHTML = `
+&lt;pre&gt; 
+${state.error}
+
+subscription: ${state.status}
+
+id:     ${state.product1.id          || ''}
+title:  ${state.product1.title       || ''}
+state:  ${state.product1.state       || ''}
+descr:  ${state.product1.description || ''}
+price:  ${state.product1.price       || ''}
+expiry: ${state.product1.expiryDate  || ''}
+&lt;/pre&gt;
+${purchaseProduct1}
+&lt;pre&gt;
+
+id:     ${state.product2.id          || ''}
+title:  ${state.product2.title       || ''}
+descr:  ${state.product2.description || ''}
+price:  ${state.product2.price       || ''}
+state:  ${state.product2.state       || ''}
+expiry: ${state.product2.expiryDate  || ''}
+&lt;/pre&gt;
+${purchaseProduct2}
+    `;
+}
+</code></pre>
+<p>无论何时我们的产品发生任何变化，界面现在都会更新以反映当前状态。</p>
+<blockquote>
+  <p>苹果和谷歌要求以这种方式显示您的产品信息，即完全按照从商店加载的方式显示。否则，他们可能会拒绝您的申请。</p>
+  <p>您还可以使用<code>store.off()</code>断开事件处理程序的连接，以便您的订阅视图仅在可见时更新。</p>
+</blockquote>
+<p>如果您想了解更多这方面的背景信息，请查看简介的<a href="https://purchase.cordova.fovea.cc/discover/about-the-plugin#displaying-products">显示产品</a>部分和<a href="https://github.com/j3k0/cordova-plugin-purchase/blob/master/doc/api.md#storeproduct-object">⇒API文档</a>，了解有关为产品找到的字段的完整详细信息。</p>
+<h3 id="purchase">Purchase 购买</h3>
+<p>到目前为止还不错，但如果我们真的可以开始购买呢？为此，我们将为这两种产品添加一个购买按钮。我们已经为购买按钮添加了占位符，让我们创建它们。在显示购买按钮之前，我们需要确保用户可以实际购买该项目。这可能是不可能的，因为有几个原因：已经在进行购买，产品已经拥有，该功能已为用户禁用(Child Mode)。
+在<code>render()</code>函数中，我们更新初始化<code>purchaseProduct1</code>和<code>purchaseProduct2</code>的代码。</p>
+<pre><code class="js language-js">//产品1的按钮
+const purchaseProduct1 = state.product1.canPurchase
+    ? `&lt;button onclick="store.order('my_subscription1')"&gt;Subscribe&lt;/button&gt;` : '';
+
+//产品2相同
+const purchaseProduct2 = state.product2.canPurchase
+    ? `&lt;button onclick="store.order('my_subscription2')"&gt;Subscribe&lt;/button&gt;` : '';
+</code></pre>
+<blockquote>
+  <p>仅当<code>product.canPurchase</code>为true时，才应显示“购买”按钮。否则，调用<code>store.order()</code>将生成错误。</p>
+</blockquote>
+<p>我们可以通过将按钮标签更改为"Upgrade"或"Downgrade"来更好地实现这一点，当其他产品为<code>owned</code>时，我将把这作为一个练习留给读者。
+现在，让我们构建并测试！</p>
+<h3 id="extrastepforandroidandroid">Extra step for Android. Android的额外步骤</h3>
+<p>如果使用<a href="https://billing.fovea.cc/">Fovea验证服务</a>，<code>expiryDate</code>和API的其他一些自动续订Android订阅功能只有在您使用此处的解释程序完成"Connect With Google"步骤后才可用。在<a href="https://billing.fovea.cc/documentation/connect-with-google-publisher-api/">这里</a>使用解释程序。</p>
+    </body>

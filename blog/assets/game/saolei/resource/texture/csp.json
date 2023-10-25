@@ -1,0 +1,249 @@
+{
+	"file": "csp.png",
+	"mc":{},
+	"res": {
+		"frame10.png": {
+			"x":1,
+			"y":682,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame1.png": {
+			"x":303,
+			"y":1,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame11.png": {
+			"x":1,
+			"y":228,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame12.png": {
+			"x":303,
+			"y":228,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame13.png": {
+			"x":605,
+			"y":1,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame14.png": {
+			"x":605,
+			"y":228,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame15.png": {
+			"x":1,
+			"y":455,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame16.png": {
+			"x":303,
+			"y":455,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame17.png": {
+			"x":605,
+			"y":455,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame18.png": {
+			"x":907,
+			"y":1,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame19.png": {
+			"x":907,
+			"y":228,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame2.png": {
+			"x":907,
+			"y":455,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame9.png": {
+			"x":1209,
+			"y":682,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame21.png": {
+			"x":303,
+			"y":682,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame22.png": {
+			"x":605,
+			"y":682,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame23.png": {
+			"x":907,
+			"y":682,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame24.png": {
+			"x":1,
+			"y":909,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame3.png": {
+			"x":303,
+			"y":909,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame4.png": {
+			"x":605,
+			"y":909,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame5.png": {
+			"x":907,
+			"y":909,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame6.png": {
+			"x":1209,
+			"y":1,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame7.png": {
+			"x":1209,
+			"y":228,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame8.png": {
+			"x":1209,
+			"y":455,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		},
+		"frame20.png": {
+			"x":1,
+			"y":1,
+			"w":300,
+			"h":225,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 300,
+			"sourceH": 225
+		}
+	},
+	"meta":{
+		"app": "https://github.com/kevinchen2046/spritesheet-game"
+	}
+}

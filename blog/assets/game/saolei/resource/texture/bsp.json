@@ -1,0 +1,169 @@
+{
+	"file": "bsp.png",
+	"mc":{},
+	"res": {
+		"frame10.png": {
+			"x":305,
+			"y":305,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame1.png": {
+			"x":153,
+			"y":1,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame11.png": {
+			"x":1,
+			"y":153,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame12.png": {
+			"x":153,
+			"y":153,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame13.png": {
+			"x":305,
+			"y":1,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame14.png": {
+			"x":305,
+			"y":153,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame15.png": {
+			"x":1,
+			"y":305,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame16.png": {
+			"x":153,
+			"y":305,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame9.png": {
+			"x":457,
+			"y":457,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame3.png": {
+			"x":457,
+			"y":1,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame4.png": {
+			"x":457,
+			"y":153,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame5.png": {
+			"x":457,
+			"y":305,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame6.png": {
+			"x":1,
+			"y":457,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame7.png": {
+			"x":153,
+			"y":457,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame8.png": {
+			"x":305,
+			"y":457,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		},
+		"frame2.png": {
+			"x":1,
+			"y":1,
+			"w":150,
+			"h":150,
+			"offX": 0,
+			"offY": 0,
+			"sourceW": 150,
+			"sourceH": 150
+		}
+	},
+	"meta":{
+		"app": "https://github.com/kevinchen2046/spritesheet-game"
+	}
+}

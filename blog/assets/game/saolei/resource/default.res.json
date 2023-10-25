@@ -1,0 +1,25 @@
+{
+	"groups": [
+		{
+			"keys": "description_json,game,game_atlas0",
+			"name": "preload"
+		}
+	],
+	"resources": [
+		{
+			"url": "config/description.json",
+			"type": "json",
+			"name": "description_json"
+		},
+		{
+			"url": "gui/game.txt",
+			"type": "bin",
+			"name": "game"
+		},
+		{
+			"url": "gui/game_atlas0.png",
+			"type": "image",
+			"name": "game_atlas0"
+		}
+	]
+}

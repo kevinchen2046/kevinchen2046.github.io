@@ -13,7 +13,7 @@ site:
   author: Kevin's Games
   nick: kevin
   description: Welcome to share your opinions on my game work.
-  link: './'
+  link: '/'
   language: en
   multi_language: true
   logo: https://kevinchen2046.github.io/assets/images/kaxiwa.gif
