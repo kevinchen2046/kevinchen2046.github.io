@@ -11,7 +11,7 @@
 site:
   subtitle: Kevin's Games
   author: Kevin's Games
-  nick: kevin
+  nick: game developer
   description: Welcome to share your opinions on my game work.
   link: '/'
   language: en
@@ -65,9 +65,9 @@ menu:
       cn: 游戏
       en: Game
   About: true
-  Tags: false
-  Archives: false
-  Friends: false
+  Tags: true
+  Archives: true
+  Friends: true
 
 #! ---------------------------------------------------------------
 #! Theme Config

@@ -73,7 +73,7 @@ async function syncFolder(sourceFolder, outFolder, options) {
             if (FileHash.hashContentSync(fileContent) != FileHash.hashFileSync(`${outFolder}/${sourcefile}`)) {
                 fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);
             } else {
-                console.log(`已存在相同文件:${sourceFolder}/${sourcefile}`);
+                options.log&&console.log(`已存在相同文件:${sourceFolder}/${sourcefile}`);
             }
         } else {
             fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);

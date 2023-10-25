@@ -7,7 +7,9 @@
     "doc": "docs"
   },
   "scripts": {
-    "build": "cd blog & npm run build & cd .. & node src/main",
+    "clean": "node src/clean",
+    "build": "cd blog & npm run build & cd .. & node src/sync",
+    "server": "cd blog & npm run server",
     "preview":"http-server ./docs -c-1"
   },
   "repository": {
