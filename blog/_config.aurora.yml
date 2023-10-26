@@ -52,18 +52,6 @@ authors:
 #！ @docs https://aurora.tridiamond.tech/guide/menu.html
 #! ---------------------------------------------------------------
 menu:
-  Demo:
-    name: 'Demo'
-    path: '/page/demo'
-    i18n:
-      cn: 演示
-      en: Demo
-  Game:
-    name: 'Game'
-    path: '/page/game'
-    i18n:
-      cn: 游戏
-      en: Game
   About: true
   Tags: true
   Archives: true

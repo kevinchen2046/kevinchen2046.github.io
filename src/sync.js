@@ -16,8 +16,8 @@ let converter = new showdown.Converter();
  */
 async function syncFolder(sourceFolder, outFolder, options) {
     if (!options) options = {};
-    let fileFilters = options.filters;
-    let exceptFiles = options.excepts;
+    let fileFilters = options.filters == undefined ? [] : options.filters;
+    let exceptFiles = options.excepts == undefined ? [] : options.excepts;
     function filterName(filename) {
         if (fileFilters && fileFilters.length) {
             for (filter of fileFilters) {
@@ -73,7 +73,7 @@ async function syncFolder(sourceFolder, outFolder, options) {
             if (FileHash.hashContentSync(fileContent) != FileHash.hashFileSync(`${outFolder}/${sourcefile}`)) {
                 fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);
             } else {
-                options.log&&console.log(`已存在相同文件:${sourceFolder}/${sourcefile}`);
+                options.log && console.log(`已存在相同文件:${sourceFolder}/${sourcefile}`);
             }
         } else {
             fs.writeFileSync(`${outFolder}/${sourcefile}`, fileContent);
