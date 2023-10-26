@@ -1,5 +1,5 @@
 ---
-title: egret-pixifilter
+title: Some egret's filter like pixi's filter.
 tags:
   - Demo
   - Egret

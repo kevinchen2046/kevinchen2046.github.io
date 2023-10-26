@@ -1,5 +1,5 @@
 ---
-title: shaders-dissolve
+title: Dissolve in webgl 
 tags:
   - Demo
   - Webgl

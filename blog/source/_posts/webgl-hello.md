@@ -1,5 +1,5 @@
 ---
-title: webgl-hello
+title: Hello,webgl!
 tags:
   - Demo
   - Webgl

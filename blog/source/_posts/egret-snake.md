@@ -1,5 +1,5 @@
 ---
-title: egret-snake
+title: Snake,Dragon? What do you think it is?
 tags:
   - Demo
   - Egret

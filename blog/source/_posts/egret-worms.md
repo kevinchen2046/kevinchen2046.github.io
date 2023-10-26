@@ -1,5 +1,5 @@
 ---
-title: egret-worms
+title: Some ideas for worms implements.
 tags:
   - Demo
   - Egret

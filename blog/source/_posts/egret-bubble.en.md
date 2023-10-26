@@ -1,5 +1,5 @@
 ---
-title: egret-bubble
+title: A bubble
 tags:
   - All
   - Demo

@@ -1,5 +1,5 @@
 ---
-title: shaders-steamer
+title: Steamer in webgl.
 tags:
   - Demo
   - Webgl

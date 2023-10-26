@@ -1,5 +1,5 @@
 ---
-title: egret-screen
+title: Screen effect implemented.
 tags:
   - Demo
   - Egret

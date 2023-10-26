@@ -1,5 +1,5 @@
 ---
-title: egret-wave
+title: Oh,What an elegant wave?
 tags:
   - Demo
   - Egret

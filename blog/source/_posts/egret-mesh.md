@@ -1,5 +1,5 @@
 ---
-title: egret-mesh
+title: Mesh demo
 tags:
   - Demo
   - Egret

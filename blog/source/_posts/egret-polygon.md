@@ -1,5 +1,5 @@
 ---
-title: egret-polygon
+title: Polygon slice in egret.
 tags:
   - Demo
   - Egret

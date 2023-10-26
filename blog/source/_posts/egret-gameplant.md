@@ -1,5 +1,5 @@
 ---
-title: egret-gameplant
+title: Game plant demo
 tags:
   - All
   - Demo

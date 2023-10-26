@@ -1,5 +1,5 @@
 ---
-title: egret-gameroguelike
+title: Game roguelike demo
 tags:
   - Demo
   - Egret
