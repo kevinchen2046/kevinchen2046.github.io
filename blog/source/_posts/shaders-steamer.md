@@ -3,8 +3,7 @@ title: shaders-steamer
 tags:
   - Demo
   - Webgl
-
-cover: ../assets/demo/egret-worms.png
+cover: ../assets/demo/shaders-steamer.png
 feature: false
 date: 2023-10-25 13:19:58
 ---

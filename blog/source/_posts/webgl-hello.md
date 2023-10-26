@@ -3,8 +3,7 @@ title: webgl-hello
 tags:
   - Demo
   - Webgl
-
-cover: ../assets/demo/egret-worms.png
+cover: ../assets/demo/webgl-hello.png
 feature: false
 date: 2023-10-25 13:20:12
 ---

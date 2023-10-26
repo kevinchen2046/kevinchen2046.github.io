@@ -1,10 +1,9 @@
 ---
 title: Minesweeper
 tags:
-  - All
   - Egret
   - Minigame
-cover: ../assets/demo/egret-worms.png
+cover: ../assets/game/saolei.png
 feature: true
 date: 2023-10-25 12:26:07
 ---

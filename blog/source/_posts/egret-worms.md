@@ -3,7 +3,6 @@ title: egret-worms
 tags:
   - Demo
   - Egret
-
 cover: ../assets/demo/egret-worms.png
 feature: false
 date: 2023-10-25 13:18:09

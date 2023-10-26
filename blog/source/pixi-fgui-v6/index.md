@@ -12,6 +12,6 @@ The fairygui demo by egret engine.
 <iframe
 width=100%
 height=600
-src='../assets/demo/fgui-v6/index.html'
+src='../../assets/demo/fgui-v6/index.html'
 frameborder=0
 ></iframe>
